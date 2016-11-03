@@ -1,6 +1,6 @@
 # name: ECHO Navigation
 # about: UI Modifications to bring in the ECHO nav bar system tro the top of the forums
-# version: 0.0.1
+# version: 1.0.0
 # authors: Nate Flood for ECHO Inc
 
 # require 'pry'
