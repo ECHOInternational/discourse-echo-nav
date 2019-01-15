@@ -1,6 +1,6 @@
 # name: ECHO Navigation
 # about: UI Modifications to bring in the ECHO nav bar system to the top of the forums
-# version: 1.8.11
+# version: 1.8.12
 # authors: Nate Flood for ECHO Inc
 
 # require 'pry'
@@ -13,7 +13,7 @@ register_asset "stylesheets/echo-nav.css"
 after_initialize do
 	ApplicationController.class_eval do
     def set_layout
-        File.expand_path('../app/views/layouts/echo.html.erb', __FILE__)
+    	use_crawler_layout? ? 'crawler' : File.expand_path('../app/views/layouts/echo.html.erb', __FILE__)
     end
   end
 end
