@@ -1,11 +1,12 @@
 # name: ECHO Navigation
 # about: UI Modifications to bring in the ECHO nav bar system to the top of the forums
-# version: 1.8.12
+# version: 2.3.0
 # authors: Nate Flood for ECHO Inc
 
 # require 'pry'
 # javascript
 register_asset "javascripts/vendor/bootstrap.js"
+register_asset "javascripts/echo-shim.js"
 
 # stylesheet
 register_asset "stylesheets/echo-nav.css"
