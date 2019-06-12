@@ -1,3 +1,56 @@
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
+  margin-right: -2px;
+}
+@media only screen and (min-width: 768px) {
+  .multimode-search {
+    padding-top: 40px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .multimode-search .search_terms {
+    min-width: 20em;
+  }
+}
+.multimode-search .current_selection {
+  float: left;
+  display: none;
+}
+@media only screen and (min-width: 480px) {
+  .multimode-search .current_selection {
+    display: block;
+  }
+}
+.multimode-search .caret {
+  float: right;
+  margin: 8px 0px;
+}
+.multimode-search .dropdown-toggle {
+  text-align: left;
+}
+@media only screen and (min-width: 480px) {
+  .multimode-search .dropdown-toggle {
+    min-width: 10em;
+  }
+}
+.multimode-search .dropdown-menu {
+  border-radius: 4px 0px 4px 4px;
+  padding: 0px;
+  top: -2px;
+  min-width: 10em;
+  border-color: #adadad;
+  overflow: hidden;
+}
+.multimode-search .dropdown-menu li .current {
+  border-bottom: 1px solid #adadad;
+}
+.multimode-search .dropdown-menu li a {
+  padding: 6px 12px;
+}
+.multimode-search .dropdown-menu li a:hover {
+  background-color: #e6e6e6;
+}
+
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -4091,6 +4144,7 @@ fieldset[disabled] .echocommunity_core .navbar-inverse .btn-link:focus {
   margin-top: 10px;
 }
 .echocommunity_core #navUniversal {
+  position: relative;
   margin-bottom: 0;
   background-image: -webkit-linear-gradient(left, #fff 0%, #f0f0f0 100%);
   background-image:      -o-linear-gradient(left, #fff 0%, #f0f0f0 100%);
@@ -4153,6 +4207,13 @@ fieldset[disabled] .echocommunity_core .navbar-inverse .btn-link:focus {
   font-weight: 400;
   color: #777;
   text-decoration: none;
+}
+@media only screen and (min-width: 480px) {
+  #ECHOitoolbar {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+  }
 }
 .echocommunity_core .navbar-nav .dropdown-large {
   position: inherit;
