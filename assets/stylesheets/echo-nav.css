@@ -3,7 +3,7 @@
 }
 @media only screen and (min-width: 768px) {
   .echocommunity_core .multimode-search {
-    padding-top: 40px;
+    padding-top: 40px !important;
   }
 }
 @media only screen and (min-width: 480px) {

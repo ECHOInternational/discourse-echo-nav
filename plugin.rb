@@ -1,7 +1,10 @@
 # name: ECHO Navigation
 # about: UI Modifications to bring in the ECHO nav bar system to the top of the forums
-# version: 2.4.2
+# version: 2.4.3
 # authors: Nate Flood for ECHO Inc
+
+#icons
+register_svg_icon "phone" if respond_to?(:register_svg_icon)
 
 # javascript
 register_asset "javascripts/vendor/bootstrap.js"

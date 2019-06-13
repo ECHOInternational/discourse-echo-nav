@@ -6,6 +6,12 @@ $( document ).ready( function() {
 	$('.fa-search').replaceWith(
 		"<svg class='fa d-icon-search svg-icon svg-node' aria-hidden='true'><use xlink:href='#search'></use></svg>"
 	);
+	$('.fa-phone').replaceWith(
+		"<svg class='fa d-icon-phone svg-icon svg-node' aria-hidden='true'><use xlink:href='#phone'></use></svg>"
+	);
+	$('.fa-user').replaceWith(
+		"<svg class='fa d-icon-phone svg-icon svg-node' aria-hidden='true'><use xlink:href='#user'></use></svg>"
+	);
 });
 
 $(document).on('click', '.search_mode', function(e){
