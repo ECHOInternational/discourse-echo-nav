@@ -1,6 +1,6 @@
 # name: ECHO Navigation
 # about: UI Modifications to bring in the ECHO nav bar system to the top of the forums
-# version: 2.4.3
+# version: 2.4.4
 # authors: Nate Flood for ECHO Inc
 
 #icons

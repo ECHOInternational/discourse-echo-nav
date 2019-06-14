@@ -26,7 +26,7 @@ function choose_search_type(search_type){
   }else{
     $('.search_terms').attr("placeholder", search_types[search_type].placeholder_short);
   }
-  $('.dropdown-menu').html(build_search_dropdown(search_type));
+  $('.search-dropdown-menu').html(build_search_dropdown(search_type));
 }
 
 function build_search_dropdown(search_type){
