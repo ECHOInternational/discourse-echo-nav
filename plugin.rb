@@ -1,14 +1,16 @@
 # name: ECHO Navigation
 # about: UI Modifications to bring in the ECHO nav bar system to the top of the forums
-# version: 3.0.0
+# version: 3.0.1
 # authors: Nate Flood for ECHO Inc
 
 #icons
 register_svg_icon "phone" if respond_to?(:register_svg_icon)
 
 # javascript
-register_asset "javascripts/vendor/bootstrap.js"
-register_asset "javascripts/echo-shim.js"
+# The interactive header behaviour (Bootstrap dropdowns/collapse, icon swap,
+# search-mode switcher) lives in assets/javascripts/discourse/initializers/echo-nav.js,
+# which Discourse auto-loads. Plain register_asset JS is compiled into AMD
+# modules that are never imported, so it would never run.
 
 # stylesheet
 register_asset "stylesheets/echo-nav.css"
