@@ -61,25 +61,27 @@ function chooseSearchType(searchType) {
 // The remote header markup ships an inline <script> that tries to pick the
 // default search mode by calling the old global `choose_search_type()`. That
 // global no longer exists (it now lives in this module), so the inline script
-// throws and the default is never applied. Reproduce its intent here: on the
-// Discourse host, default to "conversations"; elsewhere, "resources".
+// throws and the default is never applied. Reproduce its intent here. This
+// initializer only ever runs on the Discourse forum, so the forum default
+// ("conversations") always applies -- independent of hostname, so it is correct
+// on prod (conversations.echocommunity.org) and any staging host alike.
 function applyDefaultSearchType() {
   if (!$(".echocommunity_core .multimode-search").length) {
     return;
   }
-  const onConversations =
-    window.location.host === "conversations.echocommunity.org";
-  chooseSearchType(onConversations ? "conversations" : "resources");
+  chooseSearchType("conversations");
 }
 
 // Discourse ships icons as an SVG sprite, not the Font Awesome webfont, so the
 // remote markup's `<i class="fa fa-*">` tags render nothing. Swap them for the
 // inline SVG references Discourse understands. Scoped to `.echocommunity_core`
 // so we never touch Discourse's own icons. `phone` is registered in plugin.rb;
-// `search`/`user` are core icons already in the sprite.
+// `magnifying-glass`/`user` are core icons already in the sprite. (Font Awesome 6
+// renamed `search` -> `magnifying-glass`; the old `#search` symbol no longer
+// exists in the sprite, so the search button rendered blank until this swap.)
 function replaceIcons() {
   const swaps = {
-    "fa-search": "search",
+    "fa-search": "magnifying-glass",
     "fa-phone": "phone",
     "fa-user": "user",
   };
